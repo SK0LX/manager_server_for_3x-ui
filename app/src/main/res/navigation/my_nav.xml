@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/mainScreen">
+
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="com.example.vpn_manager.main_screen.presentation.view.MainFragment"
+        android:label="MainScreen" >
+        <action
+            android:id="@+id/action_mainScreen_to_inboundsFragment"
+            app:destination="@id/inboundsFragment" />
+        <action
+            android:id="@+id/action_mainScreen_to_setingsFragment"
+            app:destination="@id/setingsFragment" />
+        <action
+            android:id="@+id/action_mainScreen_to_metricsFragment"
+            app:destination="@id/metricsFragment" />
+        <action
+            android:id="@+id/action_mainScreen_to_addEditServerFragment"
+            app:destination="@id/addEditServerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inboundsFragment"
+        android:name="com.example.vpn_manager.inbounds_screen.presentation.view.InboundsFragment"
+        android:label="InboundsFragment" >
+        <action
+            android:id="@+id/action_inboundsFragment_to_clientsFragment"
+            app:destination="@id/clientsFragment" />
+        <action
+            android:id="@+id/action_inboundsFragment_to_addEditInboundFragment"
+            app:destination="@id/addEditInboundFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setingsFragment"
+        android:name="com.example.vpn_manager.settings_screen.presentation.view.SettingsFragment"
+        android:label="SetingsFragment" />
+    <fragment
+        android:id="@+id/clientsFragment"
+        android:name="com.example.vpn_manager.clients_screen.presentation.view.ClientsFragment"
+        android:label="ClientsFragment" >
+        <action
+            android:id="@+id/action_clientsFragment_to_addEditClientFragment"
+            app:destination="@id/addEditClientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/metricsFragment"
+        android:name="com.example.vpn_manager.metrics_screen.presentation.view.MetricsFragment"
+        android:label="MetricsFragment" />
+    <fragment
+        android:id="@+id/addEditServerFragment"
+        android:name="com.example.vpn_manager.modal_server.presentation.view.AddEditServerFragment"
+        android:label="AddEditServerFragment" />
+    <fragment
+        android:id="@+id/addEditInboundFragment"
+        android:name="com.example.vpn_manager.modal_inbound.presentation.view.AddEditInboundFragment"
+        android:label="AddEditInboundFragment" />
+    <fragment
+        android:id="@+id/addEditClientFragment"
+        android:name="com.example.vpn_manager.modal_client.presentation.view.AddEditClientFragment"
+        android:label="AddEditClientFragment" />
+</navigation>

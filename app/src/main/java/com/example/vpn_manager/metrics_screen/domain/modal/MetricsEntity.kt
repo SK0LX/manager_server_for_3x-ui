@@ -1,0 +1,33 @@
+package com.example.vpn_manager.metrics_screen.domain.modal
+
+data class MetricsEntity(
+    val onlineServers: Int = 0,
+    val totalServers: Int = 0,
+    val totalClients: Int = 0,
+    val activeConnections: Int = 0,
+    val cpuUsage: Int = 0,
+    val memoryUsage: Int = 0,
+    val diskUsage: Int = 0,
+    val downloadTraffic: Long = 0,
+    val uploadTraffic: Long = 0,
+    val totalTraffic: Long = 0,
+    val avgLatency: Int = 0,
+    val uptime: String = "0d 0h 0m",
+    val errorRate: Double = 0.0,
+    val tcpConnections: Int = 0,
+    val udpConnections: Int = 0,
+    val uploadSpeed: Long = 0,
+    val downloadSpeed: Long = 0,
+    val cpuCores: Int = 0,
+    val publicIpv4: String = "",
+    val publicIpv6: String = "",
+    val xrayVersion: String = "",
+    val xrayState: String = "",
+    val loadAverage: String = "",
+    val memoryCurrent: Long = 0,
+    val memoryTotal: Long = 0,
+    val diskCurrent: Long = 0,
+    val diskTotal: Long = 0,
+    val swapCurrent: Long = 0,
+    val swapTotal: Long = 0
+)
